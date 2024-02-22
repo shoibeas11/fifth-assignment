@@ -1,15 +1,27 @@
-function scrollsection(){
-    const target = document.getElementById('target')
-    target.scrollIntoView({
+
+// Scroll Function Code
+
+function scrol(){
+    const ticket = document.getElementById('ticket')
+    ticket.scrollIntoView({
         behavior:'smooth'
     })
 }
+
+
+
+
+
+
+
+
+// Seat and Price Function Code
+
 
 let seatLeft = 40;
 let seatBook = 0;
 let totalprice = 0;
 let grandprice = 0;
-let discountprice = 0;
 const allBtn = document.getElementsByClassName('A')
 console.log(allBtn);
     for(const btn of allBtn){
@@ -52,6 +64,13 @@ console.log(allBtn);
             
         })
     }
+
+
+
+
+
+// Cupon Function Code
+
     
     const btn = document.getElementById("apply");
 
@@ -63,7 +82,7 @@ console.log(allBtn);
             const apply = document.getElementById('apply')
            
          const couponCode = document.getElementById('field').value;
-         if(couponCode === "NEW15"){
+         if(couponCode === "New15"){
             
             discountprice = totalprice * 0.15;
             grandprice = totalprice - discountprice;
